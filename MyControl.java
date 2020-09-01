@@ -1,25 +1,29 @@
-package modifyFxml;
+package readData;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.shape.Circle;
+
+
+
 
 public class MyControl {
-	
-	
+
+    
 	
 	@FXML
-	Circle circleVis;
+    private void handleButtonAction(ActionEvent event) {			// Button Action      
+		
+		//Method - read xml file
+		String[] list = ReadXMLFile.readXmlFile();									// Method: Create Xml 
+		
+		//Print - Method content
+		System.out.println("Staff id : " 	+ list[0]);
+		System.out.println("First Name : " 	+ list[1]);
+		System.out.println("Last Name : " 	+ list[2]);
+		System.out.println("Nick Name : " 	+ list[3]);
+		System.out.println("Salary : " 		+ list[4]);
+		
+	            
+	}
 
-    // Constructor
-    public void setVis(Boolean x) {
-    	circleVis.setVisible(x);  }
-    
-    // Method
-    public Circle setVis() {
-        return circleVis;	}
-
-
-    
 }
-
-
