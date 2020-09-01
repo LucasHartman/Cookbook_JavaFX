@@ -1,37 +1,32 @@
-package playAudio;
+package closeWindow;
 
-import java.io.File;
-
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
+
+
 
 public class MyControl {
-	
-	
-	//local
-	//String path = "/home/lucas/eclipse-workspace/sandbox/src/playerAudio/open.wav";
-	String path = "src/audio/introA.wav";
-
-	Media media = new Media(new File(path).toURI().toString());
-	
-	// url
-	//Media media = new Media("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
 
 	
-	// get MediaPlayer
-	MediaPlayer mediaPlayer = new MediaPlayer(media);
-
+	@FXML
+	Button closeButton;
+    
+    
 	
-	
-	@FXML public void initialize() {
+	@FXML
+    private void handleButtonAction(ActionEvent event) {			// Button Action      
 		
-		System.out.println("initialize");
 		
-		// play media file
-		mediaPlayer.play();
+		// get a handle to the stage
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        // do what you have to do
+		stage.close();
+	    
+		System.out.println("close window");
+		
 	}
 
 }
-
-
