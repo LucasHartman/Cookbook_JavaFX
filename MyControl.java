@@ -1,21 +1,25 @@
-package modifyData;
+package modifyFxml;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-
-
-
+import javafx.scene.shape.Circle;
 
 public class MyControl {
-
-    
+	
+	
 	
 	@FXML
-    private void handleButtonAction(ActionEvent event) {			// Button Action      
-		
-		ModifyXMLFile.modifyXmlfile("9000");
-		
-	            
-	}
+	Circle circleVis;
 
+    // Constructor
+    public void setVis(Boolean x) {
+    	circleVis.setVisible(x);  }
+    
+    // Method
+    public Circle setVis() {
+        return circleVis;	}
+
+
+    
 }
+
+
