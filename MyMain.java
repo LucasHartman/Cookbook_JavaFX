@@ -1,4 +1,4 @@
-package closeWindow;
+package modifyData;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
